@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #fce4ec, #ffffff);
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+  }
+  
+  #musicBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #fff0f5;
+    border: 2px solid #d63384;
+    color: #d63384;
+    border-radius: 20px;
+    font-family: 'Great Vibes', cursive;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(214, 51, 132, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  #musicBtn:hover {
+    background-color: #d63384;
+    color: white;
+    box-shadow: 0 0 20px rgba(214, 51, 132, 0.5);
+  }
+  
+  .love-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.8rem;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    color: #d63384;
+    animation: float 3s ease-in-out infinite;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  @keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+  }
+  
+  .falling {
+    position: absolute;
+    animation: fall linear infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
